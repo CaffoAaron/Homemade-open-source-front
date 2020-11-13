@@ -15,6 +15,8 @@ export class PerfilComponent implements OnInit {
   submitted3 = false;
   supmited4 = false;
   users: Array<any>;
+  usersUpdate: Array<any>;
+
 
   constructor(private formBuilder: FormBuilder, private homemadeApi: HomemadeApiService) { }
 
@@ -29,8 +31,7 @@ export class PerfilComponent implements OnInit {
     this.homemadeApi.getUserchef().subscribe(data => this.users = data);
   }
   onUpdateUserChef(): void{
-
-
+    this.homemadeApi.updateHero();
   }
 
   get f() {
