@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, retry} from 'rxjs/operators';
+import {User} from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ export class HomemadeApiService {
   getUserchef(): any{
     return this.http.get('https://homemadeapi.azurewebsites.net/api/userchef');
   }
-  updateHero(): Observable<any> {
+  updateHero(): Observable<User> {
     const editPerfil  =  {
       name: 'Aaron',
       lastname: 'Alva Caffo',
@@ -40,7 +41,7 @@ export class HomemadeApiService {
       gender: false,
       certificate: ''
     };
-    return this.http.put<any>('https://homemadeapi.azurewebsites.net/api/userchef/id?id=100', JSON.stringify(editPerfil), this.httpOptions)
+    return this.http.put<User>('https://homemadeapi.azurewebsites.net/api/userchef/id?id=100', editPerfil, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }
