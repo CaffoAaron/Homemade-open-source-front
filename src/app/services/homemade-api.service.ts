@@ -27,4 +27,10 @@ export class HomemadeApiService {
     };
     return this.http.put<any>('https://homemadeapi.azurewebsites.net/api/userchef/id?id=100', editPerfil);
   }
+  getStepRecipeId(): any{
+    return this.http.get('https://homemadeapi.azurewebsites.net/api/recipesteps/recipeid?recipeId=1');
+  }
+  getIngredient(): any{
+    return this.http.get('https://homemadeapi.azurewebsites.net/api/ingredient');
+  }
 }
