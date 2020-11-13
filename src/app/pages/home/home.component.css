@@ -1,0 +1,17 @@
+body{
+  background-image: url('https://previews.123rf.com/images/bettystrange/bettystrange1611/bettystrange161100083/67488265-cena-establece-el-patr%C3%B3n-transparente-cucharas-y-tenedores-de-fondo-fondo-moderno-de-dise%C3%B1o-del-men%C3%BA-restauran.jpg');
+}
+
+
+
+.example-card {
+  width: 1000px;
+  left: 500px;
+
+}
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

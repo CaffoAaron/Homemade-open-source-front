@@ -1,0 +1,24 @@
+mat-grid-tile {
+  background-image: url("https://www.diaridetarragona.com/__export/1511954978087/sites/diaridetarragona/img/2017/11/29/2911gastro_crop1511954977759.jpg_525981578.jpg");
+}
+
+
+.example-card {
+  width: 800px;
+}
+
+.example-header-image {
+  background-image: url('https://lh3.googleusercontent.com/proxy/LmVIsm9q4eSk-Qdc4LZOC8Wlk38U7ju6eGyzFgZDsDtTZSc_4mXB-f-Lk0w9yAVIqGgMGlAnu31YrzxmiLJfs1aXA_-EqPF0XLG_s1AIeksgHU_Z0qXKr6sxl1h0BDARUqLQmDKkf2Y');
+  background-size: cover;
+}
+.fill{
+  left: 600px;
+  top: 10px;
+}
+
+.example-container {
+  width: 1000px;
+  height: 1000px;
+  margin: 10px;
+  border: 1px solid #555;
+}

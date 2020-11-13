@@ -1,0 +1,65 @@
+<mat-grid-list cols="2" >
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Homemade premiun</mat-card-title>
+        <mat-card-subtitle>Aprobecha todas la funciones de homemda </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://micarrerauniversitaria.com/wp-content/uploads/2018/03/chef-profesional-6-1024x685.jpg">
+      <mat-card-content>
+        <p>*Numero ilimitado de publicaciones al mes</p>
+        <p>*Mayor alcance a partir de tus recetas</p>
+        <p>*Sin limites de nuevos seguidores al mes</p>
+        <p>*Numero de ingredientes ilimitados</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="datoTarjeta">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Edicion de nombre y apellido </h1>
+            <h4>En este apareto se debe llenar su nuevo nombre y apellido</h4>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label>Numero de cuenta        </label>
+                <input type="text" class="form-control" formControlName="username" [ngClass]="{'is-invalid': submitted && f.username.errors}" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">>> required</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group">
+                <label>cvv       </label>
+                <input type="password" class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">>> required</div>
+                  <div *ngIf="f.email.errors.email">>> must be a valid email address</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group3">
+                <label>Feche de vencimiento</label>
+                <input type="date" class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted && f.password.errors}" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">>> required</div>
+                  <div *ngIf="f.password.errors.minlength">>> must be at least 6 characters</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group">
+                <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

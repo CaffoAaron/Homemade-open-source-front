@@ -1,0 +1,104 @@
+<mat-grid-list cols="2" >
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title *ngFor="let user of users">{{ user.name + ' ' + user.lastname }}</mat-card-title>
+        <mat-card-subtitle>Cheft </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://st2.depositphotos.com/1158045/7470/i/600/depositphotos_74708117-stock-photo-smiling-chef-in-his-kitchen.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <h2 *ngFor="let user of users">{{ 'Fecha de nacimiento: ' + user.date}}</h2>
+        <p> </p>
+        <p> </p>
+        <h2 *ngFor="let user of users">{{ 'Correo de contacto: ' + user.email}}</h2>
+        <p> </p>
+        <p> </p>
+        <h2> Responsable de la producción de alimentos, planificar los menús, manejo de presupuesto e incluso de la contratación y capacitación del personal de cocina. Un Chef ejecutivo cuenta con una formación culinaria y tiene al menos 8 años de experiencia gastronómica en cruceros, hoteles y restaurantes.</h2>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Edicion de nombre y apellido </h1>
+            <h4>En este apareto se debe llenar su nuevo nombre y apellido</h4>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label>Nombre        </label>
+                <input type="text" class="form-control" formControlName="username" [ngClass]="{'is-invalid': submitted && f.username.errors}" />
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">>> required</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group">
+                <label>Apellido       </label>
+                <input type="text" class="form-control" formControlName="lastname" [ngClass]="{'is-invalid': submitted && f.lastname.errors}" />
+                <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastname.errors.required">>> required</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group">
+                <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
+              </div>
+              <h1>Edicion de correo </h1>
+              <h4>En este apareto se debe llenar su nuevo correo</h4>
+              <div class="form-group2">
+                <label>Correo  </label>
+                <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted2 && f.email.errors}" />
+                <div *ngIf="submitted2 && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">>> required</div>
+                  <div *ngIf="f.email.errors.email">>> must be a valid email address</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group2">
+                <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
+              </div>
+              <h1>Edicion de contraseña </h1>
+              <h4>En este apareto se debe llenar su nueva contraseñna</h4>
+              <div class="form-group3">
+                <label>Password   </label>
+                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted3 && f.password.errors}" />
+                <div *ngIf="submitted3 && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">>> required</div>
+                  <div *ngIf="f.password.errors.minlength">>> must be at least 6 characters</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group3">
+                <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
+              </div>
+
+              <h1>Edicion de fecha de nacimiento </h1>
+              <h4>En este apareto se debe llenar su nueva fecha de nacimeinto</h4>
+              <div class="form-group4">
+                <label>Feche de naciento   </label>
+                <input type="date" class="form-control" formControlName="password" [ngClass]="{'is-invalid':supmited4 && f.date.errors}" />
+                <div *ngIf="supmited4 && f.date.errors" class="invalid-feedback">
+                  <div *ngIf="f.date.errors.required">>> required</div>
+                </div>
+              </div>
+              <p> </p>
+              <p> </p>
+              <div class="form-group4">
+                <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
