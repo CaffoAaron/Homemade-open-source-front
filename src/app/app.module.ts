@@ -23,6 +23,8 @@ import { MenbresiaComponent } from './pages/menbresia/menbresia.component';
 import { MenbresiaDatosComponent } from './pages/menbresia-datos/menbresia-datos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RecipeDetailComponent } from './pages/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './pages/recipe-edit/recipe-edit.component';
+import { RecipeCreateComponent } from './pages/recipe-create/recipe-create.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { RecipeDetailComponent } from './pages/recipe-detail/recipe-detail.compo
     MenbresiaComponent,
     MenbresiaDatosComponent,
     PerfilComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeEditComponent,
+    RecipeCreateComponent
   ],
   imports: [
     BrowserModule,

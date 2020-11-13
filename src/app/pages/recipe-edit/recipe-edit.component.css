@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  justify-content: normal;
+}
+.box {
+  flex: 0 0 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  background-color:lightyellow;
+}
+
+.object  {
+  color: orange;
+  display: flex;
+}
+
+
+form {
+  border: 3px solid black;
+}
+
+input[type=text], input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btnsubcncl {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+.mat-card{
+  width: border-box;
+}
