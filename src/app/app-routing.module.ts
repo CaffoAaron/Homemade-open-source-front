@@ -7,6 +7,7 @@ import {PerfilComponent} from './pages/perfil/perfil.component';
 import {RecipeDetailComponent} from "./pages/recipe-detail/recipe-detail.component";
 import {RecipeEditComponent} from './pages/recipe-edit/recipe-edit.component';
 import {RecipeCreateComponent} from './pages/recipe-create/recipe-create.component';
+import {SearchRecipeComponent} from './pages/search-recipe/search-recipe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent},
   { path: 'recipe/detail', component: RecipeDetailComponent},
   { path: 'recipe/edit', component: RecipeEditComponent},
-  { path: 'recipe/create', component: RecipeCreateComponent}
+  { path: 'recipe/create', component: RecipeCreateComponent},
+  { path: 'recipe/search', component: SearchRecipeComponent}
 ];
 
 @NgModule({
