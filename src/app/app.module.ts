@@ -25,6 +25,7 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { RecipeDetailComponent } from './pages/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './pages/recipe-edit/recipe-edit.component';
 import { RecipeCreateComponent } from './pages/recipe-create/recipe-create.component';
+import { SearchRecipeComponent } from './pages/search-recipe/search-recipe.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RecipeCreateComponent } from './pages/recipe-create/recipe-create.compo
     PerfilComponent,
     RecipeDetailComponent,
     RecipeEditComponent,
-    RecipeCreateComponent
+    RecipeCreateComponent,
+    SearchRecipeComponent
   ],
   imports: [
     BrowserModule,
