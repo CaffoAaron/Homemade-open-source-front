@@ -1,0 +1,96 @@
+<body>
+<mat-card class ="form-container">
+  <mat-card-header>
+    <mat-card-title>Registro</mat-card-title>
+    <mat-card-subtitle>Fácil de usar</mat-card-subtitle>
+  </mat-card-header>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+      <mat-form-field appearance="outline" class ="form-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name"
+               type="text"
+               placeholder="Nombre"
+               required>
+        <mat-error *ngIf="registerForm.controls.name.touched && registerForm.controls.name.invalid">
+          <span *ngIf="registerForm.controls.email.errors.required">Name is required</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class ="form-field">
+        <mat-label>Apellidos</mat-label>
+        <input matInput formControlName="lastname"
+               type="text"
+               placeholder="Apellidos"
+               required>
+        <mat-error *ngIf="registerForm.controls.lastname.touched && registerForm.controls.lastname.invalid">
+          <span *ngIf="registerForm.controls.lastname.errors.required">Lastname is required</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Fecha de nacimiento </mat-label>
+        <input matInput
+               formControlName="birthday"
+               type="date"
+               placeholder="Fecha de nacimiento"
+               required>
+        <mat-error *ngIf="registerForm.controls.birthday.touched && registerForm.controls.birthday.invalid">
+          <span *ngIf="registerForm.controls.birthday.errors.required">Date of birth is required</span>
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Número de teléfono</mat-label>
+        <input matInput
+               formControlName="tel"
+               type="tel"
+               placeholder="Numero de telefono"
+               required>
+        <mat-error *ngIf="registerForm.controls.tel.touched && registerForm.controls.tel.invalid">
+          <span *ngIf="registerForm.controls.tel.errors.required">Number is required</span>
+          <span *ngIf="registerForm.controls.tel.errors.minlength">Invalid number</span>
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput
+               formControlName="email"
+               type="email"
+               placeholder="username@example.com"
+               required>
+        <mat-error *ngIf="registerForm.controls.email.touched && registerForm.controls.email.invalid">
+          <span *ngIf="registerForm.controls.email.errors.required">Email is required</span>
+          <span *ngIf="registerForm.controls.email.errors.email">Invalid Email</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Contraseña</mat-label>
+        <input matInput
+               formControlName="password"
+               type="password"
+               placeholder="Password"
+               required minlength="6">
+        <mat-error *ngIf="registerForm.controls.password.touched && registerForm.controls.password.invalid">
+          <span *ngIf="registerForm.controls.password.errors.required">Password is required</span>
+          <span *ngIf="registerForm.controls.password.errors.minlength">Password must have 8 digits</span>
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Género</mat-label>
+        <mat-select>
+          <mat-option value="Male">Hombre</mat-option>
+          <mat-option value="Female">Mujer</mat-option>
+          <mat-option value="Others">Otros</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      &nbsp; &nbsp;<button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Registrarse</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+</body>
