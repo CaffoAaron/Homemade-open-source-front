@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -27,7 +29,9 @@ import { RecipeEditComponent } from './pages/recipe-edit/recipe-edit.component';
 import { RecipeCreateComponent } from './pages/recipe-create/recipe-create.component';
 import { SearchRecipeComponent } from './pages/search-recipe/search-recipe.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './pages/login-form/login-form.component';
+import { MenuTableComponent } from './pages/menu-table/menu-table.component';
+import { EditMenuComponent } from './pages/edit-menu/edit-menu.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     RecipeCreateComponent,
     SearchRecipeComponent,
     RegisterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    MenuTableComponent,
+    EditMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     MatDividerModule,
     MatListModule,
     MatSidenavModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
