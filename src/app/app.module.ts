@@ -11,8 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from "@angular/material/select";
-import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from '@angular/material/select';
+import {MatOptionModule} from '@angular/material/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -31,7 +31,7 @@ import { SearchRecipeComponent } from './pages/search-recipe/search-recipe.compo
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginFormComponent } from './pages/login-form/login-form.component';
 import { MenuTableComponent } from './pages/menu-table/menu-table.component';
-import { EditMenuComponent } from './pages/edit-menu/edit-menu.component';
+// import { EditMenuComponent } from './pages/edit-menu/edit-menu.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { EditMenuComponent } from './pages/edit-menu/edit-menu.component';
     RegisterComponent,
     LoginFormComponent,
     MenuTableComponent,
-    EditMenuComponent
+    // EditMenuComponent
   ],
   imports: [
     BrowserModule,

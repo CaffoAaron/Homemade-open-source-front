@@ -6,7 +6,7 @@
     <mat-card-content>
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Correo</mat-label>
-        <input matInput formControlName="email" type="email" placeholder="Ej. usuario@ejemplo.com" required>
+        <input matInput formControlName="email" type="email" placeholder="Ej. usuario@ejemplo.com" autocomplete="email" required>
         <mat-error *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid">
           <span *ngIf="loginForm.controls.email.errors.required">Se requiere correo.</span>
           <span *ngIf="loginForm.controls.email.errors.email">La dirección de correo electrónico debe ser válida.</span>
@@ -14,7 +14,7 @@
       </mat-form-field>
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Contraseña</mat-label>
-        <input matInput formControlName="password" type="password" placeholder="Password" required minlength="6">
+        <input matInput formControlName="password" type="password" placeholder="Password" autocomplete="password" required minlength="6">
         <mat-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
           <span *ngIf="loginForm.controls.password.errors.required">Se requiere contraseña.</span>
           <span *ngIf="loginForm.controls.password.errors.minlength">La contraseña debe contener 6 caracteres.</span>

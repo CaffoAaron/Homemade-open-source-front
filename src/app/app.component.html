@@ -5,5 +5,8 @@
   <button mat-button routerLink="/menu" routerLinkActive="active">Menbresia</button>
   <button mat-button routerLink="/recipe/create" routerLinkActive="active">Agregar Receta</button>
   <button mat-button routerLink="recipe/search" routerLinkActive="active">Buscar</button>
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active">Iniciar Sesion</button>
+  <button mat-button *ngIf="!isLoggedIn" routerLink="/register" routerLinkActive="active">Registrarse</button>
+  <a mat-button *ngIf="isLoggedIn" href (click)="logout()">Cerrar Sesion</a>
 </mat-toolbar>
 <router-outlet></router-outlet>
