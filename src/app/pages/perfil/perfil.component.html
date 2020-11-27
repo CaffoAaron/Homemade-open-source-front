@@ -3,15 +3,15 @@
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title *ngFor="let user of users">{{ user.name + ' ' + user.lastname }}</mat-card-title>
+        <mat-card-title>{{ currentUser.name + ' ' + currentUser.lastname }}</mat-card-title>
         <mat-card-subtitle>Cheft </mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="https://st2.depositphotos.com/1158045/7470/i/600/depositphotos_74708117-stock-photo-smiling-chef-in-his-kitchen.jpg" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <h2 *ngFor="let user of users">{{ 'Fecha de nacimiento: ' + user.date}}</h2>
+        <h2>{{ 'Fecha de nacimiento: ' + currentUser.date}}</h2>
         <p> </p>
         <p> </p>
-        <h2 *ngFor="let user of users">{{ 'Correo de contacto: ' + user.email}}</h2>
+        <h2>{{ 'Correo de contacto: ' + currentUser.email}}</h2>
         <p> </p>
         <p> </p>
         <h2> Responsable de la producción de alimentos, planificar los menús, manejo de presupuesto e incluso de la contratación y capacitación del personal de cocina. Un Chef ejecutivo cuenta con una formación culinaria y tiene al menos 8 años de experiencia gastronómica en cruceros, hoteles y restaurantes.</h2>

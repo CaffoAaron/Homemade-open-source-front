@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {HomemadeApiService} from '../../services/homemade-api.service';
+import {TokenStorageService} from '../../services/token-storage.service';
 
 
 @Component({
@@ -16,11 +17,11 @@ export class PerfilComponent implements OnInit {
   supmited4 = false;
   users: Array<any>;
   usersUpdate: Array<any>;
-
-
-  constructor(private formBuilder: FormBuilder, private homemadeApi: HomemadeApiService) { }
+  currentUser: any;
+  constructor(private formBuilder: FormBuilder, private homemadeApi: HomemadeApiService, private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.tokenStorageService.getUser();
     this.registerForm = this.formBuilder.group({
       username: ['', Validators.required],
       lastname: ['', Validators.required],
