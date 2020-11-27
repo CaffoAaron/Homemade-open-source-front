@@ -25,16 +25,16 @@ export class HomemadeApiService {
     return throwError('Something happened with request, please try again later.');
   }
   getAllRecipes(): any{
-    return this.http.get('https://homemadeapi.azurewebsites.net/api/recipe');
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe');
   }
   getAllRecipesById(id): any{
     return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe/id?id=' + id);
   }
-  getAllRecipesSearch(): any{
-    return this.http.get('https://homemadeapi.azurewebsites.net/api/userchef');
-  }
   getUserchef(): any{
     return this.http.get('https://homemadeapi.azurewebsites.net/api/userchef');
+  }
+  getRecipeByName(recipeName): any{
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe/name?name=' + recipeName);
   }
   updateHero(): Observable<any> {
     const editPerfil  =  {

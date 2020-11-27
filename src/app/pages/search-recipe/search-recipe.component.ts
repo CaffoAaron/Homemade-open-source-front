@@ -10,13 +10,14 @@ import {HomemadeApiService} from '../../services/homemade-api.service';
 })
 export class SearchRecipeComponent implements OnInit {
   recipes: Array<any>;
+  recipeName: '';
   constructor(private homemadeApi: HomemadeApiService) { }
 
   ngOnInit(): void {
     this.homemadeApi.getAllRecipes().subscribe(data => this.recipes = data);
   }
-  search(): void{
-    this.homemadeApi.getAllRecipesSearch().subscribe(data => this.recipes = data);
+  search(recipeName): void{
+    this.homemadeApi.getRecipeByName(recipeName).subscribe(data => this.recipes = data);
   }
 
 }
