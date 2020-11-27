@@ -27,6 +27,9 @@ export class HomemadeApiService {
   getAllRecipes(): any{
     return this.http.get('https://homemadeapi.azurewebsites.net/api/recipe');
   }
+  getAllRecipesById(id): any{
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe/id?id=' + id);
+  }
   getAllRecipesSearch(): any{
     return this.http.get('https://homemadeapi.azurewebsites.net/api/userchef');
   }
