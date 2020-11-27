@@ -37,7 +37,7 @@ export class AuthService {
         name: 'aaron',
         lastname: 'string',
         password: 'string',
-        email: 'string',
+        email: 'pepe@hotmail.com',
         picture: 'string',
         date: '2020-11-27T17:54:31.570Z',
         gender: true,

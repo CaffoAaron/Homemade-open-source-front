@@ -71,10 +71,10 @@
                formControlName="password"
                type="password"
                placeholder="Password"
-               required minlength="6">
+               required minlength="4">
         <mat-error *ngIf="registerForm.controls.password.touched && registerForm.controls.password.invalid">
           <span *ngIf="registerForm.controls.password.errors.required">Password is required</span>
-          <span *ngIf="registerForm.controls.password.errors.minlength">Password must have 8 digits</span>
+          <span *ngIf="registerForm.controls.password.errors.minlength">Password must have 4 digits</span>
         </mat-error>
       </mat-form-field>
     </mat-card-content>
