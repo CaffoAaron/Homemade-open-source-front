@@ -23,7 +23,7 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required, Validators.minLength(6)]]
+      password: [null, [Validators.required, Validators.minLength(4)]]
     });
     if (this.tokenStorageService.getToken()) {
       this.isLoggedIn = true;

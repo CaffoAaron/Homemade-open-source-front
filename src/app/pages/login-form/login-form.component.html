@@ -14,7 +14,7 @@
       </mat-form-field>
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Contraseña</mat-label>
-        <input matInput formControlName="password" type="password" placeholder="Password" autocomplete="password" required minlength="6">
+        <input matInput formControlName="password" type="password" placeholder="Password" autocomplete="password" required minlength="4">
         <mat-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
           <span *ngIf="loginForm.controls.password.errors.required">Se requiere contraseña.</span>
           <span *ngIf="loginForm.controls.password.errors.minlength">La contraseña debe contener 6 caracteres.</span>
