@@ -23,8 +23,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h1>Edicion de nombre y apellido </h1>
-            <h4>En este apareto se debe llenar su nuevo nombre y apellido</h4>
+            <h1>Edición de nombre y apellido </h1>
+            <h4>En este apartado se debe llenar su nuevo nombre y apellido</h4>
 
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
               <div class="form-group">
@@ -48,8 +48,8 @@
               <div class="form-group">
                 <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
               </div>
-              <h1>Edicion de correo </h1>
-              <h4>En este apareto se debe llenar su nuevo correo</h4>
+              <h1>Edición de correo </h1>
+              <h4>En este apartado se debe llenar su nuevo correo</h4>
               <div class="form-group2">
                 <label>Correo  </label>
                 <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted2 && f.email.errors}" />
@@ -63,8 +63,8 @@
               <div class="form-group2">
                 <button mat-raised-button color="warn" class="btn btn-primary" (click)="onUpdateUserChef()">Guardar</button>
               </div>
-              <h1>Edicion de contraseña </h1>
-              <h4>En este apareto se debe llenar su nueva contraseñna</h4>
+              <h1>Edición de contraseña </h1>
+              <h4>En este apartado se debe llenar su nueva contraseña</h4>
               <div class="form-group3">
                 <label>Password   </label>
                 <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':submitted3 && f.password.errors}" />
@@ -79,10 +79,10 @@
                 <button mat-raised-button color="warn" class="btn btn-primary">Guardar</button>
               </div>
 
-              <h1>Edicion de fecha de nacimiento </h1>
-              <h4>En este apareto se debe llenar su nueva fecha de nacimeinto</h4>
+              <h1>Edición de fecha de nacimiento </h1>
+              <h4>En este apartado se debe llenar su nueva fecha de nacimiento</h4>
               <div class="form-group4">
-                <label>Feche de naciento   </label>
+                <label>Fecha de nacimiento   </label>
                 <input type="date" class="form-control" formControlName="password" [ngClass]="{'is-invalid':supmited4 && f.date.errors}" />
                 <div *ngIf="supmited4 && f.date.errors" class="invalid-feedback">
                   <div *ngIf="f.date.errors.required">>> required</div>
