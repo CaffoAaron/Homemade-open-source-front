@@ -41,7 +41,7 @@ export class AuthService {
         picture: 'string',
         date: '2020-11-27T17:54:31.570Z',
         gender: true,
-        certificate: 'string'
+        certificate: ''
       });
   }
 }

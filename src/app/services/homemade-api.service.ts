@@ -34,7 +34,7 @@ export class HomemadeApiService {
     return this.http.get('https://homemadeapi.azurewebsites.net/api/userchef');
   }
   getRecipeByName(recipeName): any{
-    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe/name?name=' + recipeName);
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipe/name?name=papa' );
   }
   updateHero(): Observable<any> {
     const editPerfil  =  {
@@ -51,9 +51,9 @@ export class HomemadeApiService {
       .pipe(retry(2), catchError(this.handleError));
   }
   getStepRecipeId(): any{
-    return this.http.get('https://homemadeapi.azurewebsites.net/api/recipesteps/recipeid?recipeId=1');
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/recipesteps/recipeid?recipeId=3');
   }
   getIngredient(): any{
-    return this.http.get('https://homemadeapi.azurewebsites.net/api/ingredient');
+    return this.http.get('https://homemade20201124161107.azurewebsites.net/api/ingredient');
   }
 }
