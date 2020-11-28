@@ -10,8 +10,14 @@ body{
 
 }
 
+.search{
+  padding-left: 800px;
+  padding-top: 70px;
+  width: 1000px;
+  left: 500px;
+}
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('https://lh3.googleusercontent.com/proxy/LmVIsm9q4eSk-Qdc4LZOC8Wlk38U7ju6eGyzFgZDsDtTZSc_4mXB-f-Lk0w9yAVIqGgMGlAnu31YrzxmiLJfs1aXA_-EqPF0XLG_s1AIeksgHU_Z0qXKr6sxl1h0BDARUqLQmDKkf2Y');
   background-size: cover;
 }
